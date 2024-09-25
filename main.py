@@ -296,6 +296,7 @@ class Soldier(pygame.sprite.Sprite):
 				self.shoot()
 			else:
 				if self.idling == False:
+					self.direction = 1 if player.rect.x > self.rect.x else -1
 					if self.direction == 1:
 						ai_moving_right = True
 					else:
